@@ -31,6 +31,23 @@ describe NbaStats do
       end
     end
 
+    describe '.boxscore' do
+      boxscore = client.boxscore('0011300032')
+      it 'should return a scoreboard resource' do
+        expect(boxscore.class.to_s).to eq 'NbaStats::Resources::Boxscore'
+      end
+      it 'should be named scoreboard' do
+        expect(boxscore.name).to eq 'boxscore'
+      end
+      NbaStats::Resources::Boxscore::VALID_RESULT_SETS.each do |valid_result_set|
+        describe ".#{valid_result_set}" do
+          it 'should return an Array' do
+            expect(boxscore.send(valid_result_set).class.to_s).to eq 'Array'
+          end
+        end
+      end
+    end
+
   end
 
   describe 'configuration' do

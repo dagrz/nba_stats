@@ -1,6 +1,7 @@
 require 'rest_client'
 require 'addressable/uri'
 require 'nba_stats/stats/scoreboard'
+require 'nba_stats/stats/boxscore'
 require 'nba_stats/errors'
 
 module NbaStats
@@ -8,6 +9,7 @@ module NbaStats
   class Client
 
     include NbaStats::Scoreboard
+    include NbaStats::Boxscore
 
     # Define the same set of accessors as the Awesome module
     attr_accessor *Configuration::VALID_CONFIG_KEYS
