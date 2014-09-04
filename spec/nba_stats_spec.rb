@@ -22,6 +22,13 @@ describe NbaStats do
       it 'should be named scoreboard' do
         expect(scoreboard.name).to eq 'scoreboard'
       end
+      NbaStats::Resources::Scoreboard::VALID_RESULT_SETS.each do |valid_result_set|
+        describe ".#{valid_result_set}" do
+          it 'should return an Array' do
+            expect(scoreboard.send(valid_result_set).class.to_s).to eq 'Array'
+          end
+        end
+      end
     end
 
   end
