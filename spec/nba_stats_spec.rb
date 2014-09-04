@@ -22,7 +22,6 @@ describe NbaStats do
       it 'should be named scoreboard' do
         expect(scoreboard.name).to eq 'scoreboard'
       end
-      puts scoreboard.pretty_generate_names
     end
 
   end
