@@ -6,7 +6,7 @@ module NbaStats
     VALID_CONFIG_KEYS     = VALID_CONNECTION_KEYS + VALID_OPTIONS_KEYS
 
     DEFAULT_ENDPOINT    = 'http://stats.nba.com'
-    DEFAULT_USER_AGENT  = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36'.freeze
+    DEFAULT_USER_AGENT  = "nba_stats/#{NbaStats::VERSION} ruby gem (https://github.com/dagrz/nba_stats)"
     DEFAULT_ACCEPT      = 'application/json'
     DEFAULT_LEAGUE_ID   = '00'
 
