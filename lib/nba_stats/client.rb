@@ -1,5 +1,6 @@
 require 'rest_client'
 require 'addressable/uri'
+require 'nba_stats/configuration'
 require 'nba_stats/stats/scoreboard'
 require 'nba_stats/stats/box_score'
 require 'nba_stats/stats/common_all_players'
