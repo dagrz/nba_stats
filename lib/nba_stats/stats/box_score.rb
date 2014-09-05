@@ -7,7 +7,7 @@ module NbaStats
     # The path of the boxscore API
     BOX_SCORE_PATH   = '/stats/boxscore'
 
-    # Calls the boxscore API and returns a scoreboard resource.
+    # Calls the boxscore API and returns a BoxScore resource.
     #
     # @param game_id [String]
     # @param range_type [Integer]
