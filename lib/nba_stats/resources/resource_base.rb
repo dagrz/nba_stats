@@ -43,6 +43,12 @@ module NbaStats
 
         result_sets.each do |result_set|
           result_set_name = result_set['name'].underscore
+          # puts "#{result_set_name}"
+          # heads = "    "
+          # result_set['headers'].each do |h|
+          #   heads += ":#{h.underscore}, "
+          # end
+          # puts heads
           if valid_result_sets.include? result_set_name.to_sym
             instance_variable_set "@#{result_set_name}", row_set_to_array_of_hashes(result_set['headers'], result_set['rowSet'])
             singleton_class.class_eval do; attr_accessor result_set_name; end

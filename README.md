@@ -24,4 +24,4 @@ Or install it yourself as:
 
     # Get today's scoreboard
     scoreboard = client.scoreboard
-    boxscore = client.boxscore
+    box_score = client.box_score

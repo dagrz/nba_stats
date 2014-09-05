@@ -1,11 +1,11 @@
-require 'nba_stats/resources/boxscore'
+require 'nba_stats/resources/box_score'
 
 module NbaStats
 
-  module Boxscore
+  module BoxScore
 
     # The path of the boxscore API
-    BOXSCORE_PATH   = '/stats/boxscore'
+    BOX_SCORE_PATH   = '/stats/boxscore'
 
     # Calls the boxscore API and returns a scoreboard resource.
     #
@@ -15,10 +15,10 @@ module NbaStats
     # @param end_period [Integer]
     # @param start_range [Integer]
     # @param end_range [Integer]
-    # @return [NbaStats::Resources::Boxscore]
-    def boxscore(game_id='0000000001', range_type=0, start_period=0, end_period=0, start_range=0, end_range=0)
-      NbaStats::Resources::Boxscore.new(
-          get(BOXSCORE_PATH, {
+    # @return [NbaStats::Resources::BoxScore]
+    def box_score(game_id='0000000001', range_type=0, start_period=0, end_period=0, start_range=0, end_range=0)
+      NbaStats::Resources::BoxScore.new(
+          get(BOX_SCORE_PATH, {
               :GameID => game_id,
               :RangeType => range_type,
               :StartPeriod => start_period,
@@ -29,6 +29,6 @@ module NbaStats
       )
     end
 
-  end # Boxscore
+  end # BoxScore
 
 end
