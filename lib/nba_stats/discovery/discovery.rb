@@ -66,7 +66,7 @@ module NbaStats
     #
 "
       uri.query_values.each do |key, value|
-        output += "    # @param #{key.underscore} [xxxxxxxxxx], \n"
+        output += "    # @param #{key.underscore} [xxxxxxxxxx]\n"
       end
       output+="    # @return [NbaStats::Resources::#{class_name(uri.path)}]
     def #{class_name(uri.path)}("

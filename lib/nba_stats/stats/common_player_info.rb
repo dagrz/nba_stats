@@ -9,9 +9,9 @@ module NbaStats
 
     # Calls the commonplayerinfo API and returns a CommonPlayerInfo resource.
     #
-    # @param player_id [Integer],
-    # @param season_type [String],
-    # @param league_id [String],
+    # @param player_id [Integer]
+    # @param season_type [String]
+    # @param league_id [String]
     # @return [NbaStats::Resources::CommonPlayerInfo]
     def common_player_info(player_id=1, season_type='Regular Season', league_id=NbaStats::Configuration::DEFAULT_LEAGUE_ID)
     NbaStats::Resources::CommonPlayerInfo.new(

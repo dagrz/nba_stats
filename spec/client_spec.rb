@@ -76,6 +76,23 @@ describe 'NbaStats' do
       end
     end # .common_all_players
 
+    describe '.player_profile' do
+      player_profile = client.player_profile('2013-14', 'Regular Season', '00', 201567)
+      it 'should return a player_profile resource' do
+        expect(player_profile).to be_a NbaStats::Resources::PlayerProfile
+      end
+      it 'should be named player_profile' do
+        expect(player_profile.name).to eq 'playerprofile'
+      end
+      NbaStats::Resources::PlayerProfile::VALID_RESULT_SETS.each do |valid_result_set|
+        describe ".#{valid_result_set}" do
+          it 'should return an Array' do
+            expect(player_profile.send(valid_result_set)).to be_a Array
+          end
+        end
+      end
+    end # .player_profile
+
   end # client
 
 end
