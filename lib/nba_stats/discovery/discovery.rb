@@ -22,7 +22,6 @@ module NbaStats
       rescue Exception => e
         output += "Required parameters: #{e.message}\n"
       end
-
       
       uri.query_values.each do |key, value|
         output += "#{key.underscore}=#{value}, "
