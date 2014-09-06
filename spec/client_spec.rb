@@ -71,6 +71,9 @@ describe 'NbaStats' do
           end
         end
       end
+      it 'should be about Kevin Love' do
+        expect(common_player_info.player_headline_stats[0][:player_name]).to eq 'Kevin Love'
+      end
     end # .common_all_players
 
   end # client
