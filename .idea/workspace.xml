@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2192219d-4399-4fd9-b996-a3dc41583912" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nba_stats/resources/common_player_info.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nba_stats/stats/common_player_info.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/nba_stats/client.rb" afterPath="$PROJECT_DIR$/lib/nba_stats/client.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/client_spec.rb" afterPath="$PROJECT_DIR$/spec/client_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/nba_stats/discovery/discovery.rb" afterPath="$PROJECT_DIR$/lib/nba_stats/discovery/discovery.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="nba_stats.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="client_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/client_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5048143" vertical-offset="518" max-vertical-offset="1245">
-              <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="518" max-vertical-offset="1245">
+              <caret line="59" column="59" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7051282" vertical-offset="0" max-vertical-offset="702">
+              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -101,13 +105,13 @@
         <option value="$PROJECT_DIR$/lib/nba_stats/stats/scoreboard.rb" />
         <option value="$PROJECT_DIR$/lib/nba_stats/stats/common_all_players.rb" />
         <option value="$PROJECT_DIR$/lib/nba_stats/configuration.rb" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lib/nba_stats/discovery/discovery.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/lib/nba_stats/resources/common_player_info.rb" />
         <option value="$PROJECT_DIR$/lib/nba_stats/client.rb" />
         <option value="$PROJECT_DIR$/lib/nba_stats/stats/common_player_info.rb" />
         <option value="$PROJECT_DIR$/spec/client_spec.rb" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -475,14 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.491453" vertical-offset="0" max-vertical-offset="702">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/nba_stats/resources/scoreboard.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33613446" vertical-offset="0" max-vertical-offset="714">
@@ -587,14 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/nba_stats/stats/common_player_info.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/nba_stats/client.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="683" max-vertical-offset="1410">
@@ -605,8 +593,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/client_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5048143" vertical-offset="518" max-vertical-offset="1245">
-          <caret line="59" column="52" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="518" max-vertical-offset="1245">
+          <caret line="59" column="59" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/nba_stats/stats/common_player_info.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7051282" vertical-offset="0" max-vertical-offset="702">
+          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding />
         </state>
       </provider>

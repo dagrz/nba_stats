@@ -30,3 +30,6 @@ Or install it yourself as:
 
     # Get a list of players for the 2013-14 season
     common_all_players = client.common_all_players('00', '2013-14', 0)
+
+    # Get some basic info about Kevin Love
+    common_player_info = client.common_player_info(201567, 'Regular Season', '00')
