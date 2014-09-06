@@ -5,20 +5,25 @@ module NbaStats
 
   module Discovery
 
+    # Given a full API call URI, generates template resource and stats classes
+    #
+    # @param discovery_uri [String]
+    # @return [String]
     def self.discover(discovery_uri)
       uri = Addressable::URI.parse(discovery_uri)
       client = NbaStats::Client.new
 
-      puts "Discovering #{class_name(uri.path)}".upcase
-      puts '------------------------------------------------'
-      puts "Path: #{uri.path}"
+      output = ''
+      output += "Discovering #{class_name(uri.path).upcase}\n"
+      output += "------------------------------------------------\n"
+      output += "Path: #{uri.path}\n"
       begin
         client.get(uri.path, {})
       rescue Exception => e
-        puts "Required parameters: #{e.message}\n"
+        output += "Required parameters: #{e.message}\n"
       end
 
-      output = ''
+      
       uri.query_values.each do |key, value|
         output += "#{key.underscore}=#{value}, "
       end
@@ -27,17 +32,25 @@ module NbaStats
       json = JSON.parse(client.get(uri.path, uri.query_values))
       result_sets = json['resultSets']
 
-      output += stats(client, uri, result_sets)
+      output += stats(uri)
       output += "\n"
-      output += resources(client, uri, result_sets)
-      puts output
+      output += resources(uri, result_sets)
+      output
     end
 
+    # Returns a best guess at the potential api name given a path
+    #
+    # @param path [String]
+    # @return [String]
     def self.class_name(path)
       path.split('/').last
     end
 
-    def self.stats(client, uri, result_sets)
+    # Generates a rough stats ruby file for the api call
+    #
+    # @param uri [String]
+    # @return [String]
+    def self.stats(uri)
       output = "------------------------------------------------\n"
       output += "/nba_stats/stats/#{class_name(uri.path)}.rb\n"
       output += "------------------------------------------------\n"
@@ -77,9 +90,15 @@ module NbaStats
 end
 "
       output += '------------------------------------------------'
+      output
     end
 
-    def self.resources(client, uri, result_sets)
+    # Generates a rough resource ruby file for the api call
+    #
+    # @param uri [String]
+    # @param result_sets [Array]
+    # @return [String]
+    def self.resources(uri, result_sets)
       output = "------------------------------------------------\n"
       output += "/nba_stats/resources/#{class_name(uri.path)}.rb\n"
       output += "------------------------------------------------\n"
@@ -117,6 +136,7 @@ module NbaStats
 
 end\n"
       output += '------------------------------------------------'
+      output
     end
 
   end # Discovery
