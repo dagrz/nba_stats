@@ -11,6 +11,7 @@ require 'nba_stats/stats/common_team_roster'
 require 'nba_stats/stats/team_game_log'
 require 'nba_stats/stats/team_year_by_year_stats'
 require 'nba_stats/stats/common_team_years'
+require 'nba_stats/stats/shot_chart_detail'
 require 'nba_stats/errors'
 
 module NbaStats
@@ -27,6 +28,7 @@ module NbaStats
     include NbaStats::TeamGameLog
     include NbaStats::TeamYearByYearStats
     include NbaStats::CommonTeamYears
+    include NbaStats::ShotChartDetail
 
     # Define the same set of accessors as the Awesome module
     attr_accessor *Configuration::VALID_CONFIG_KEYS

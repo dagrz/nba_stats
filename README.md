@@ -45,3 +45,4 @@ List of available functions:
     team_game_log
     team_year_by_year_stats
     common_team_years
+    shot_chart_detail
