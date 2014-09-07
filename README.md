@@ -37,6 +37,7 @@ List of available functions:
     # client.
     scoreboard
     box_score
+    box_score_four_factors
     common_all_players
     common_player_info
     player_profile
