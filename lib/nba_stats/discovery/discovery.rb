@@ -34,6 +34,9 @@ module NbaStats
       output += stats(uri)
       output += "\n"
       output += resources(uri, result_sets)
+      output += "\n"
+      output += spec(uri)
+      output += "\n"
       output
     end
 
@@ -133,6 +136,52 @@ module NbaStats
     end # #{class_name(uri.path)}
 
   end
+
+end\n"
+      output += '------------------------------------------------'
+      output
+    end
+
+    # Generates a rough spec ruby file for the api call
+    #
+    # @param uri [String]
+    # @return [String]
+    def self.spec(uri)
+      output = "------------------------------------------------\n"
+      output += "/spec/client/#{class_name(uri.path)}_spec.rb\n"
+      output += "------------------------------------------------\n"
+
+      output += "require 'spec_helper'
+
+describe 'NbaStats' do
+
+  describe 'client' do
+    client = NbaStats::Client.new
+
+    describe '.#{class_name(uri.path)}' do
+      #{class_name(uri.path)} = client.#{class_name(uri.path)}("
+
+      uri.query_values.each do |key, value|
+        output += "#{value}, "
+      end
+
+      output += ")
+      it 'should return a #{class_name(uri.path)} resource' do
+        expect(#{class_name(uri.path)}).to be_a NbaStats::Resources::#{class_name(uri.path)}
+      end
+      it 'should be named #{class_name(uri.path)}' do
+        expect(#{class_name(uri.path)}.name).to eq '#{class_name(uri.path)}'
+      end
+      NbaStats::Resources::#{class_name(uri.path)}::VALID_RESULT_SETS.each do |valid_result_set|
+        describe \".\#{valid_result_set}\" do
+          it 'should return an Array' do
+            expect(#{class_name(uri.path)}.send(valid_result_set)).to be_a Array
+          end
+        end
+      end
+    end # .#{class_name(uri.path)}
+
+  end # client
 
 end\n"
       output += '------------------------------------------------'
