@@ -1,4 +1,5 @@
 require 'nba_stats/resources/common_all_players'
+require 'nba_stats/constants'
 
 module NbaStats
 
@@ -13,7 +14,11 @@ module NbaStats
     # @param season [String]
     # @param is_only_current_season [Integer]
     # @return [NbaStats::Resources::CommonAllPlayers]
-    def common_all_players(league_id=NbaStats::Configuration::DEFAULT_LEAGUE_ID, season='2013-14', is_only_current_season=0)
+    def common_all_players(
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA,
+        season='2013-14',
+        is_only_current_season=0
+    )
       NbaStats::Resources::CommonAllPlayers.new(
           get(COMMON_ALL_PLAYERS_PATH, {
               :LeagueID => league_id,

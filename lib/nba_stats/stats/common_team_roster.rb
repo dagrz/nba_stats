@@ -1,4 +1,5 @@
 require 'nba_stats/resources/common_team_roster'
+require 'nba_stats/constants'
 
 module NbaStats
 
@@ -13,7 +14,11 @@ module NbaStats
     # @param league_id [String]
     # @param team_id [Integer]
     # @return [NbaStats::Resources::CommonTeamRoster]
-    def common_team_roster(season='2013-14', league_id=NbaStats::Configuration::DEFAULT_LEAGUE_ID, team_id=1)
+    def common_team_roster(
+        season='2013-14',
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA,
+        team_id=1
+    )
       NbaStats::Resources::CommonTeamRoster.new(
           get(COMMON_TEAM_ROSTER_PATH, {
               :Season => season,

@@ -1,4 +1,5 @@
 require 'nba_stats/resources/common_player_info'
+require 'nba_stats/constants'
 
 module NbaStats
 
@@ -13,13 +14,17 @@ module NbaStats
     # @param season_type [String]
     # @param league_id [String]
     # @return [NbaStats::Resources::CommonPlayerInfo]
-    def common_player_info(player_id=1, season_type='Regular Season', league_id=NbaStats::Configuration::DEFAULT_LEAGUE_ID)
-    NbaStats::Resources::CommonPlayerInfo.new(
-        get(COMMON_PLAYER_INFO_PATH, {
-            :PlayerID => player_id,
-            :SeasonType => season_type,
-            :LeagueID => league_id
-        })
+    def common_player_info(
+        player_id=1,
+        season_type=NbaStats::Constants::SEASON_TYPE_REGULAR,
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA
+    )
+      NbaStats::Resources::CommonPlayerInfo.new(
+          get(COMMON_PLAYER_INFO_PATH, {
+              :PlayerID => player_id,
+              :SeasonType => season_type,
+              :LeagueID => league_id
+          })
     )
     end
 

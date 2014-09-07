@@ -103,6 +103,7 @@ end
       output += "------------------------------------------------\n"
 
       output += "require 'nba_stats/resources/resource_base'
+require 'nba_stats/constants'
 
 module NbaStats
 

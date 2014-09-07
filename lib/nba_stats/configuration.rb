@@ -8,7 +8,6 @@ module NbaStats
     DEFAULT_ENDPOINT    = 'http://stats.nba.com'
     DEFAULT_USER_AGENT  = "nba_stats/#{NbaStats::VERSION} ruby gem (https://github.com/dagrz/nba_stats)"
     DEFAULT_ACCEPT      = 'application/json'
-    DEFAULT_LEAGUE_ID   = '00'
 
     # Build accessor methods for every config options so we can do this
     attr_accessor *VALID_CONFIG_KEYS

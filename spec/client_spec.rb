@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'nba_stats/constants'
 
 describe 'NbaStats' do
 
@@ -6,7 +7,7 @@ describe 'NbaStats' do
     client = NbaStats::Client.new
 
     describe '.scoreboard' do
-      scoreboard = client.scoreboard(NbaStats::Configuration::DEFAULT_LEAGUE_ID, Date.parse('10-02-2014'), 0)
+      scoreboard = client.scoreboard('00', Date.parse('10-02-2014'), 0)
       it 'should return a scoreboard resource' do
         expect(scoreboard).to be_a NbaStats::Resources::Scoreboard
       end

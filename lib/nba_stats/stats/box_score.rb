@@ -1,4 +1,5 @@
 require 'nba_stats/resources/box_score'
+require 'nba_stats/constants'
 
 module NbaStats
 
@@ -16,7 +17,14 @@ module NbaStats
     # @param start_range [Integer]
     # @param end_range [Integer]
     # @return [NbaStats::Resources::BoxScore]
-    def box_score(game_id='0000000001', range_type=0, start_period=0, end_period=0, start_range=0, end_range=0)
+    def box_score(
+        game_id='0000000001',
+        range_type=0,
+        start_period=0,
+        end_period=0,
+        start_range=0,
+        end_range=0
+    )
       NbaStats::Resources::BoxScore.new(
           get(BOX_SCORE_PATH, {
               :GameID => game_id,
