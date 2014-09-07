@@ -20,7 +20,7 @@ describe 'NbaStats' do
           end
         end
       end
-      it 'should return 1 games' do
+      it 'should return 1 game' do
         expect(box_score_four_factors.game_summary.count).to eq 1
       end
     end # .box_score_four_factors

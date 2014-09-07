@@ -38,6 +38,7 @@ List of available functions:
     scoreboard
     box_score
     box_score_four_factors
+    box_score_usage
     common_all_players
     common_player_info
     player_profile
