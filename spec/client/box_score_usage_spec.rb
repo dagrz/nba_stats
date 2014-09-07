@@ -10,7 +10,7 @@ describe 'NbaStats' do
       it 'should return a box_score_usage resource' do
         expect(box_score_usage).to be_a NbaStats::Resources::BoxScoreUsage
       end
-      it 'should be named box_score_usage' do
+      it 'should be named box_score' do
         expect(box_score_usage.name).to eq 'boxscore'
       end
       NbaStats::Resources::BoxScoreUsage::VALID_RESULT_SETS.each do |valid_result_set|

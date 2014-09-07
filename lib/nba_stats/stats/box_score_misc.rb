@@ -1,13 +1,13 @@
-require 'nba_stats/resources/box_score_scoring'
+require 'nba_stats/resources/box_score_misc'
 
 module NbaStats
 
-  module BoxScoreScoring
+  module BoxScoreMisc
 
-    # The path of the boxscorescoring API
-    BOX_SCORE_SCORING_PATH   = '/stats/boxscorescoring'
+    # The path of the boxscoremisc API
+    BOX_SCORE_MISC_PATH   = '/stats/boxscoremisc'
 
-    # Calls the boxscorescoring API and returns a BoxScoreScoring resource.
+    # Calls the boxscoremisc API and returns a BoxScoreMisc resource.
     #
     # @param game_id [String]
     # @param range_type [Integer]
@@ -15,8 +15,8 @@ module NbaStats
     # @param end_period [Integer]
     # @param start_range [Integer]
     # @param end_range [Integer]
-    # @return [NbaStats::Resources::BoxScoreScoring]
-    def box_score_scoring(
+    # @return [NbaStats::Resources::BoxScoreMisc]
+    def box_score_misc(
         game_id,
         range_type=0,
         start_period=0,
@@ -24,8 +24,8 @@ module NbaStats
         start_range=0,
         end_range=0
     )
-      NbaStats::Resources::BoxScoreScoring.new(
-          get(BOX_SCORE_SCORING_PATH, {
+      NbaStats::Resources::BoxScoreMisc.new(
+          get(BOX_SCORE_MISC_PATH, {
               :GameID => game_id,
               :RangeType => range_type,
               :StartPeriod => start_period,
@@ -36,6 +36,6 @@ module NbaStats
       )
     end
 
-  end # BoxScoreScoring
+  end # BoxScoreMisc
 
 end
