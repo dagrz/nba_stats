@@ -6,7 +6,7 @@ describe 'NbaStats' do
     client = NbaStats::Client.new
 
     describe '.scoreboard' do
-      scoreboard = client.scoreboard(Date.parse('10-02-2014'))
+      scoreboard = client.scoreboard(Date.parse('16-04-2014'))
       it 'should return a scoreboard resource' do
         expect(scoreboard).to be_a NbaStats::Resources::Scoreboard
       end
@@ -19,6 +19,9 @@ describe 'NbaStats' do
             expect(scoreboard.send(valid_result_set)).to be_a Array
           end
         end
+      end
+      it 'should return 15 games' do
+        expect(scoreboard.game_header.count).to eq 15
       end
     end # .scoreboard
 
@@ -36,6 +39,9 @@ describe 'NbaStats' do
             expect(box_score.send(valid_result_set)).to be_a Array
           end
         end
+      end
+      it 'should return 1 games' do
+        expect(box_score.game_summary.count).to eq 1
       end
     end # .box_score
 
@@ -71,13 +77,16 @@ describe 'NbaStats' do
           end
         end
       end
+      it 'should return 1 player' do
+        expect(common_player_info.common_player_info.count).to eq 1
+      end
       it 'should be about Kevin Love' do
         expect(common_player_info.player_headline_stats[0][:player_name]).to eq 'Kevin Love'
       end
     end # .common_all_players
 
     describe '.player_profile' do
-      player_profile = client.player_profile(1610612746, '2013-14', '2010-11', '2013-14')
+      player_profile = client.player_profile(201567, '2013-14', '2010-11', '2013-14')
       it 'should return a player_profile resource' do
         expect(player_profile).to be_a NbaStats::Resources::PlayerProfile
       end
@@ -90,6 +99,9 @@ describe 'NbaStats' do
             expect(player_profile.send(valid_result_set)).to be_a Array
           end
         end
+      end
+      it 'should return 1 player' do
+        expect(player_profile.overview_career_avg.count).to eq 1
       end
     end # .player_profile
 
@@ -107,6 +119,9 @@ describe 'NbaStats' do
             expect(team_info_common.send(valid_result_set)).to be_a Array
           end
         end
+      end
+      it 'should return 1 team' do
+        expect(team_info_common.team_info_common.count).to eq 1
       end
     end # .team_info_common
 
