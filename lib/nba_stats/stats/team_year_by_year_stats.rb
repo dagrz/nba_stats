@@ -9,11 +9,11 @@ module NbaStats
 
     # Calls the teamyearbyyearstats API and returns a TeamYearByYearStats resource.
     #
-    # @param team_id [xxxxxxxxxx]
-    # @param season [xxxxxxxxxx]
-    # @param per_mode [xxxxxxxxxx]
-    # @param season_type [xxxxxxxxxx]
-    # @param league_id [xxxxxxxxxx]
+    # @param team_id [Integer]
+    # @param season [String]
+    # @param per_mode [String]
+    # @param season_type [String]
+    # @param league_id [String]
     # @return [NbaStats::Resources::TeamYearByYearStats]
     def team_year_by_year_stats(
         team_id,

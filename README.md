@@ -44,3 +44,4 @@ List of available functions:
     common_team_roster
     team_game_log
     team_year_by_year_stats
+    common_team_years
