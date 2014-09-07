@@ -32,16 +32,14 @@ Get an item value from the row:
 
     my_item = my_row[:an_item_name]
 
-Examples of available functions:
+List of available functions:
 
-    # Get today's scoreboard
-    scoreboard = client.scoreboard('00', Date.today, 0)
-
-    # Get box score for game 1
-    box_score = client.box_score('0000000001', 0, 0, 0, 0, 0)
-
-    # Get a list of players for the 2013-14 season
-    common_all_players = client.common_all_players('00', '2013-14', 0)
-
-    # Get some basic info about Kevin Love
-    common_player_info = client.common_player_info(201567, 'Regular Season', '00')
+    # client.
+    scoreboard
+    box_score
+    common_all_players
+    common_player_info
+    player_profile
+    team_info_common
+    common_team_roster
+    team_game_log
