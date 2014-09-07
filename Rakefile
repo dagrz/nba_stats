@@ -18,7 +18,7 @@ task :discover do
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/teamyearbyyearstats?LeagueID=00&PerMode=Totals&SeasonType=Regular+Season&TeamID=1610612755&Season=2013-14')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/commonteamyears?LeagueID=00')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/shotchartdetail?Season=2013-14&SeasonType=Regular+Season&LeagueID=00&TeamID=1610612755&PlayerID=0&GameID=&Outcome=&Location=&Month=0&SeasonSegment=&DateFrom=&DateTo=&OpponentTeamID=0&VsConference=&VsDivision=&Position=&RookieYear=&GameSegment=&Period=0&LastNGames=0&ContextFilter=&ContextMeasure=FG_PCT')
-  puts NbaStats::Discovery.discover('http://stats.nba.com/stats/playbyplay?GameID=0021300901&StartPeriod=0&EndPeriod=0&tabView=playbyplay')
+  puts NbaStats::Discovery.discover('http://stats.nba.com/stats/playbyplay?GameID=0021300901&StartPeriod=0&EndPeriod=0')
   # puts NbaStats::Discovery.discover('http://stats.nba.com/stats/videoevents?LeagueID=00&Season=2012-13&SeasonType=Regular+Season&TeamID=0&PlayerID=0&GameID=0021300901&Outcome=&Location=&Month=0&SeasonSegment=&DateFrom=&DateTo=&OpponentTeamID=0&VsConference=&VsDivision=&Position=&RookieYear=&GameSegment=&Period=0&LastNGames=0&ClutchTime=&AheadBehind=&PointDiff=&RangeType=1&StartPeriod=1&EndPeriod=10&StartRange=0&EndRange=0&ContextFilter=&ContextMeasure=FG_PCT&GameEventID=4')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/boxscorefourfactors?GameID=0021300901&RangeType=0&StartPeriod=0&EndPeriod=0&StartRange=0&EndRange=0&tabView=playbyplay')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/boxscoreusage?GameID=0021300901&RangeType=0&StartPeriod=0&EndPeriod=0&StartRange=0&EndRange=0&tabView=playbyplay')
