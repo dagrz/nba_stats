@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'nba_stats/constants'
 
 describe 'NbaStats' do
 

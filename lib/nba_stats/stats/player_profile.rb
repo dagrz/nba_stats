@@ -23,9 +23,9 @@ module NbaStats
         season_type=NbaStats::Constants::SEASON_TYPE_REGULAR,
         league_id=NbaStats::Constants::LEAGUE_ID_NBA,
         player_id=1,
-        graph_start_season='2008-09',
+        graph_start_season=NbaStats::Constants::SEASON_FIRST,
         graph_end_season='2014-15',
-        graph_stat='PTS'
+        graph_stat=NbaStats::Constants::GRAPH_STAT_POINTS
     )
       NbaStats::Resources::PlayerProfile.new(
           get(PLAYER_PROFILE_PATH, {

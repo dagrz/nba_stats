@@ -69,11 +69,11 @@ module NbaStats
         output += "    # @param #{key.underscore} [xxxxxxxxxx]\n"
       end
       output+="    # @return [NbaStats::Resources::#{class_name(uri.path)}]
-    def #{class_name(uri.path)}("
+    def #{class_name(uri.path)}(\n"
       uri.query_values.each do |key, value|
-        output += "#{key.underscore}=#{value}, "
+        output += "        #{key.underscore}=#{value},\n"
       end
-      output += ")
+      output += "    )
       NbaStats::Resources::#{class_name(uri.path)}.new(
           get(#{class_name(uri.path).upcase}_PATH, {
 "
