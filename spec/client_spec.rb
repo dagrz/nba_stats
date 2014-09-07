@@ -6,7 +6,7 @@ describe 'NbaStats' do
     client = NbaStats::Client.new
 
     describe '.scoreboard' do
-      scoreboard = client.scoreboard('00', Date.parse('10-02-2014'), 0)
+      scoreboard = client.scoreboard(Date.parse('10-02-2014'))
       it 'should return a scoreboard resource' do
         expect(scoreboard).to be_a NbaStats::Resources::Scoreboard
       end
@@ -40,7 +40,7 @@ describe 'NbaStats' do
     end # .box_score
 
     describe '.common_all_players' do
-      common_all_players = client.common_all_players()
+      common_all_players = client.common_all_players('2013-14')
       it 'should return a common_all_players resource' do
         expect(common_all_players).to be_a NbaStats::Resources::CommonAllPlayers
       end
@@ -77,7 +77,7 @@ describe 'NbaStats' do
     end # .common_all_players
 
     describe '.player_profile' do
-      player_profile = client.player_profile('2013-14', 'Regular Season', '00', 201567)
+      player_profile = client.player_profile(1610612746, '2013-14', '2010-11', '2013-14')
       it 'should return a player_profile resource' do
         expect(player_profile).to be_a NbaStats::Resources::PlayerProfile
       end
@@ -94,7 +94,7 @@ describe 'NbaStats' do
     end # .player_profile
 
     describe '.team_info_common' do
-      team_info_common = client.team_info_common('2013-14', 'Regular Season', '00', 1610612746)
+      team_info_common = client.team_info_common(1610612746, '2013-14')
       it 'should return a team_info_common resource' do
         expect(team_info_common).to be_a NbaStats::Resources::TeamInfoCommon
       end
@@ -111,7 +111,7 @@ describe 'NbaStats' do
     end # .team_info_common
 
     describe '.common_team_roster' do
-      common_team_roster = client.common_team_roster('2013-14', '00', 1610612746)
+      common_team_roster = client.common_team_roster(1610612746, '2013-14')
       it 'should return a common_team_roster resource' do
         expect(common_team_roster).to be_a NbaStats::Resources::CommonTeamRoster
       end
@@ -128,7 +128,7 @@ describe 'NbaStats' do
     end # .common_team_roster
 
     describe '.team_game_log' do
-      team_game_log = client.team_game_log('2013-14', 'Regular Season', '00', 1610612746)
+      team_game_log = client.team_game_log(1610612746, '2013-14')
       it 'should return a team_game_log resource' do
         expect(team_game_log).to be_a NbaStats::Resources::TeamGameLog
       end

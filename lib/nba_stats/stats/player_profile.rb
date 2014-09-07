@@ -10,22 +10,22 @@ module NbaStats
 
     # Calls the playerprofile API and returns a PlayerProfile resource.
     #
-    # @param season [String]
-    # @param season_type [String]
-    # @param league_id [String]
     # @param player_id [Integer]
+    # @param season [String]
     # @param graph_start_season [String]
     # @param graph_end_season [String]
     # @param graph_stat [String]
+    # @param season_type [String]
+    # @param league_id [String]
     # @return [NbaStats::Resources::PlayerProfile]
     def player_profile(
-        season='2013-14',
+        player_id,
+        season,
+        graph_start_season,
+        graph_end_season,
+        graph_stat=NbaStats::Constants::GRAPH_STAT_POINTS,
         season_type=NbaStats::Constants::SEASON_TYPE_REGULAR,
-        league_id=NbaStats::Constants::LEAGUE_ID_NBA,
-        player_id=1,
-        graph_start_season=NbaStats::Constants::SEASON_FIRST,
-        graph_end_season='2014-15',
-        graph_stat=NbaStats::Constants::GRAPH_STAT_POINTS
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA
     )
       NbaStats::Resources::PlayerProfile.new(
           get(PLAYER_PROFILE_PATH, {

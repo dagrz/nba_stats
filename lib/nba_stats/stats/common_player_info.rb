@@ -15,7 +15,7 @@ module NbaStats
     # @param league_id [String]
     # @return [NbaStats::Resources::CommonPlayerInfo]
     def common_player_info(
-        player_id=1,
+        player_id,
         season_type=NbaStats::Constants::SEASON_TYPE_REGULAR,
         league_id=NbaStats::Constants::LEAGUE_ID_NBA
     )

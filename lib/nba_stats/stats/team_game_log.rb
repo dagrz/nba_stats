@@ -10,16 +10,16 @@ module NbaStats
 
     # Calls the teamgamelog API and returns a TeamGameLog resource.
     #
+    # @param team_id [Integer]
     # @param season [String]
     # @param season_type [String]
     # @param league_id [String]
-    # @param team_id [Integer]
     # @return [NbaStats::Resources::TeamGameLog]
     def team_game_log(
-        season='2013-14',
+        team_id,
+        season,
         season_type=NbaStats::Constants::SEASON_TYPE_REGULAR,
-        league_id=NbaStats::Constants::LEAGUE_ID_NBA,
-        team_id=1
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA
     )
       NbaStats::Resources::TeamGameLog.new(
           get(TEAM_GAME_LOG_PATH, {

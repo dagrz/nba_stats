@@ -10,14 +10,14 @@ module NbaStats
 
     # Calls the scoreboard API and returns a Scoreboard resource.
     #
-    # @param league_id [String]
     # @param game_date [Date]
     # @param day_offset [Integer]
+    # @param league_id [String]
     # @return [NbaStats::Resources::Scoreboard]
     def scoreboard(
-        league_id=NbaStats::Constants::LEAGUE_ID_NBA,
         game_date=Date.today,
-        day_offset=0
+        day_offset=0,
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA
     )
       NbaStats::Resources::Scoreboard.new(
           get(SCOREBOARD_PATH, {

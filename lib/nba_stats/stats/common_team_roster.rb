@@ -10,14 +10,14 @@ module NbaStats
 
     # Calls the commonteamroster API and returns a CommonTeamRoster resource.
     #
+    # @param team_id [Integer]
     # @param season [String]
     # @param league_id [String]
-    # @param team_id [Integer]
     # @return [NbaStats::Resources::CommonTeamRoster]
     def common_team_roster(
-        season='2013-14',
-        league_id=NbaStats::Constants::LEAGUE_ID_NBA,
-        team_id=1
+        team_id,
+        season,
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA
     )
       NbaStats::Resources::CommonTeamRoster.new(
           get(COMMON_TEAM_ROSTER_PATH, {

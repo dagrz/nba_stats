@@ -8,7 +8,7 @@ require 'nba_stats/discovery/discovery'
 desc 'Discover an NBA.com stats API endpoint'
 task :discover do
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/scoreboard/?LeagueID=00&gameDate=03%2F05%2F2014&DayOffset=0&date=Wed+Mar+05+2014+00%3A00%3A00+GMT%2B1100+(EST)')
-  puts NbaStats::Discovery.discover('http://stats.nba.com/stats/boxscore?GameID=0021300904&RangeType=0&StartPeriod=0&EndPeriod=0&StartRange=0&EndRange=0&tabView=boxscore')
+  puts NbaStats::Discovery.discover('http://stats.nba.com/stats/boxscore?GameID=0021300904&RangeType=0&StartPeriod=0&EndPeriod=0&StartRange=0&EndRange=0')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/commonallplayers/?LeagueID=00&Season=2013-14&IsOnlyCurrentSeason=0')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/commonplayerinfo/?PlayerID=201567&SeasonType=Regular+Season&LeagueID=00')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/playerprofile?Season=2013-14&SeasonType=Regular+Season&LeagueID=00&PlayerID=201567&GraphStartSeason=2008-09&GraphEndSeason=2014-15&GraphStat=PTS')

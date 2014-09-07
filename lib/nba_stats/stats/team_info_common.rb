@@ -10,16 +10,16 @@ module NbaStats
 
     # Calls the teaminfocommon API and returns a TeamInfoCommon resource.
     #
+    # @param team_id [Integer]
     # @param season [String]
     # @param season_type [String]
     # @param league_id [String]
-    # @param team_id [Integer]
     # @return [NbaStats::Resources::TeamInfoCommon]
     def team_info_common(
-        season='2013-14',
+        team_id,
+        season,
         season_type=NbaStats::Constants::SEASON_TYPE_REGULAR,
-        league_id=NbaStats::Constants::LEAGUE_ID_NBA,
-        team_id=1
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA
     )
       NbaStats::Resources::TeamInfoCommon.new(
           get(TEAM_INFO_COMMON_PATH, {

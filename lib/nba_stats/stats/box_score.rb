@@ -18,7 +18,7 @@ module NbaStats
     # @param end_range [Integer]
     # @return [NbaStats::Resources::BoxScore]
     def box_score(
-        game_id='0000000001',
+        game_id,
         range_type=0,
         start_period=0,
         end_period=0,

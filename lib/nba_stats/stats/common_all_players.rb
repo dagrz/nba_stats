@@ -10,14 +10,14 @@ module NbaStats
 
     # Calls the commonallplayers API and returns a CommonAllPlayers resource.
     #
-    # @param league_id [String]
     # @param season [String]
     # @param is_only_current_season [Integer]
+    # @param league_id [String]
     # @return [NbaStats::Resources::CommonAllPlayers]
     def common_all_players(
-        league_id=NbaStats::Constants::LEAGUE_ID_NBA,
-        season='2013-14',
-        is_only_current_season=0
+        season,
+        is_only_current_season=0,
+        league_id=NbaStats::Constants::LEAGUE_ID_NBA
     )
       NbaStats::Resources::CommonAllPlayers.new(
           get(COMMON_ALL_PLAYERS_PATH, {
