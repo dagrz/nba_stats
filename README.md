@@ -41,6 +41,7 @@ List of available functions:
     box_score_usage
     box_score_scoring
     box_score_misc
+    box_score_advanced
     common_all_players
     common_player_info
     player_profile
