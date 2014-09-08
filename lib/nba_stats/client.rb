@@ -24,6 +24,10 @@ require 'nba_stats/stats/player_career_stats'
 require 'nba_stats/stats/home_page_leaders'
 require 'nba_stats/stats/franchise_history'
 require 'nba_stats/stats/draft_combine_player_anthro'
+require 'nba_stats/stats/draft_combine_drill_results'
+require 'nba_stats/stats/draft_combine_non_stationary_shooting'
+require 'nba_stats/stats/draft_combine_spot_shooting'
+require 'nba_stats/stats/draft_combine_stats'
 require 'nba_stats/errors'
 
 module NbaStats
@@ -53,6 +57,10 @@ module NbaStats
     include NbaStats::HomePageLeaders
     include NbaStats::FranchiseHistory
     include NbaStats::DraftCombinePlayerAnthro
+    include NbaStats::DraftCombineDrillResults
+    include NbaStats::DraftCombineNonStationaryShooting
+    include NbaStats::DraftCombineSpotShooting
+    include NbaStats::DraftCombineStats
 
     # Define the same set of accessors as the Awesome module
     attr_accessor *Configuration::VALID_CONFIG_KEYS

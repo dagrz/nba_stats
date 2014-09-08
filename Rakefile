@@ -37,7 +37,7 @@ task :discover do
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2014-15')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/draftcombinenonstationaryshooting?LeagueID=00&SeasonYear=2014-15')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/draftcombinespotshooting?LeagueID=00&SeasonYear=2014-15')
-  puts NbaStats::Discovery.discover('http://stats.nba.com/stats/draftcombinestats?LeagueID=00&draftyear=2014&SeasonYear=2014-15')
+  puts NbaStats::Discovery.discover('http://stats.nba.com/stats/draftcombinestats?LeagueID=00&SeasonYear=2014-15')
 end
 
 
