@@ -51,6 +51,7 @@ List of available functions:
     team_game_log
     team_year_by_year_stats
     common_team_years
+    franchise_history
     shot_chart_detail
     play_by_play
     league_dash_lineups

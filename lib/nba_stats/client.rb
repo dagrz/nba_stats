@@ -22,6 +22,7 @@ require 'nba_stats/stats/league_dash_lineups'
 require 'nba_stats/stats/league_dash_player_stats'
 require 'nba_stats/stats/player_career_stats'
 require 'nba_stats/stats/home_page_leaders'
+require 'nba_stats/stats/franchise_history'
 require 'nba_stats/errors'
 
 module NbaStats
@@ -49,6 +50,7 @@ module NbaStats
     include NbaStats::LeagueDashPlayerStats
     include NbaStats::PlayerCareerStats
     include NbaStats::HomePageLeaders
+    include NbaStats::FranchiseHistory
 
     # Define the same set of accessors as the Awesome module
     attr_accessor *Configuration::VALID_CONFIG_KEYS
