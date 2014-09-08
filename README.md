@@ -57,3 +57,8 @@ List of available functions:
     league_dash_lineups
     league_dash_player_stats
     home_page_leaders
+    draft_combine_player_anthro
+    draft_combine_drill_results
+    draft_combine_non_stationary_shooting
+    draft_combine_spot_shooting
+    draft_combine_stats
