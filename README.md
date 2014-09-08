@@ -45,6 +45,7 @@ List of available functions:
     common_all_players
     common_player_info
     player_profile
+    player_career_stats
     team_info_common
     common_team_roster
     team_game_log
