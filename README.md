@@ -52,3 +52,4 @@ List of available functions:
     common_team_years
     shot_chart_detail
     play_by_play
+    league_dash_lineups
