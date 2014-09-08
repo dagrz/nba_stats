@@ -55,3 +55,4 @@ List of available functions:
     play_by_play
     league_dash_lineups
     league_dash_player_stats
+    home_page_leaders

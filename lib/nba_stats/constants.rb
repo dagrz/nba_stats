@@ -62,6 +62,7 @@ module NbaStats
     MEASURE_TYPE_OPPONENT           = 'Opponent'
     YES                             = 'Y'
     NO                              = 'N'
+    GAME_SCOPE_SEASON               = 'Season'
     GAME_SCOPE_YESTERDAY            = 'Yesterday'
     GAME_SCOPE_LAST_10              = 'Last 10'
     PLAYER_EXPERIENCE_ROOKIE        = 'Rookie'
@@ -77,6 +78,19 @@ module NbaStats
     PLAYER_POSITION_FORWARD_GUARD   = 'F-G'
     PLAYER_POSITION_GUARD_FORWARD   = 'G-F'
     CONF_BOTH                       = 'Both'
+    PLAYER_OR_TEAM_PLAYER           = 'Player'
+    PLAYER_OR_TEAM_TEAM             = 'Team'
+    PLAYER_SCOPE_ALL_PLAYERS        = 'All Players'
+    PLAYER_SCOPE_ROOKIES            = 'Rookies'
+    STAT_CATEGORY_POINTS            = 'Points'
+    STAT_CATEGORY_REBOUNDS          = 'Rebounds'
+    STAT_CATEGORY_ASSISTS           = 'Assists'
+    STAT_CATEGORY_DEFENSE           = 'Defense'
+    STAT_CATEGORY_CLUTCH            = 'Clutch'
+    STAT_CATEGORY_PLAYMAKING        = 'Playmaking'
+    STAT_CATEGORY_EFFICIENCY        = 'Efficiency'
+    STAT_CATEGORY_FAST_BREAK        = 'Fast Break'
+    STAT_CATEGORY_SCORING_BREAKDOWN = 'Scoring Breakdown'
   end
 
 end

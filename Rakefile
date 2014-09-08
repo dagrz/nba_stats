@@ -31,7 +31,7 @@ task :discover do
   # puts NbaStats::Discovery.discover('http://stats.nba.com/stats/leaderstiles?Season=2013-14&SeasonType=Regular+Season&LeagueID=00&Stat=REB&PlayerOrTeam=Player&GameScope=Season&PlayerScope=All+Players')
   # puts NbaStats::Discovery.discover('http://stats.nba.com/stats/leagueleaders?LeagueID=00&PerMode=PerGame&StatCategory=PTS&Season=All+Time&SeasonType=Regular+Season&Scope=S')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/playercareerstats?PlayerID=201609&LeagueID=00&PerMode=Totals')
-  puts NbaStats::Discovery.discover('http://stats.nba.com/stats/homepageleaders?Season=2013-14&SeasonType=Playoffs&LeagueID=00&GameScope=Season&StatCategory=Points&PlayerScope=All+Players&PlayerOrTeam=Team&viewType=graph')
+  puts NbaStats::Discovery.discover('http://stats.nba.com/stats/homepageleaders?Season=2013-14&SeasonType=Playoffs&LeagueID=00&GameScope=Season&StatCategory=Points&PlayerScope=All+Players&PlayerOrTeam=Team')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/franchisehistory?LeagueID=00')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/draftcombineplayeranthro?LeagueID=00&SeasonYear=2014-15')
   puts NbaStats::Discovery.discover('http://stats.nba.com/stats/draftcombinedrillresults?LeagueID=00&SeasonYear=2014-15')
