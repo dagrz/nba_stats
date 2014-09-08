@@ -2,6 +2,10 @@
 
 A ruby interface for the NBA.com stats JSON API.
 
+## Author
+
+https://twitter.com/dagrz
+
 ## Installation
 
 Add this line to your application's Gemfile:
