@@ -53,3 +53,4 @@ List of available functions:
     shot_chart_detail
     play_by_play
     league_dash_lineups
+    league_dash_player_stats

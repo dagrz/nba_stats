@@ -19,6 +19,7 @@ require 'nba_stats/stats/box_score_scoring'
 require 'nba_stats/stats/box_score_misc'
 require 'nba_stats/stats/box_score_advanced'
 require 'nba_stats/stats/league_dash_lineups'
+require 'nba_stats/stats/league_dash_player_stats'
 require 'nba_stats/errors'
 
 module NbaStats
@@ -43,6 +44,7 @@ module NbaStats
     include NbaStats::BoxScoreMisc
     include NbaStats::BoxScoreAdvanced
     include NbaStats::LeagueDashLineups
+    include NbaStats::LeagueDashPlayerStats
 
     # Define the same set of accessors as the Awesome module
     attr_accessor *Configuration::VALID_CONFIG_KEYS

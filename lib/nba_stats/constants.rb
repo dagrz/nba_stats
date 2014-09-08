@@ -62,6 +62,21 @@ module NbaStats
     MEASURE_TYPE_OPPONENT           = 'Opponent'
     YES                             = 'Y'
     NO                              = 'N'
+    GAME_SCOPE_YESTERDAY            = 'Yesterday'
+    GAME_SCOPE_LAST_10              = 'Last 10'
+    PLAYER_EXPERIENCE_ROOKIE        = 'Rookie'
+    PLAYER_EXPERIENCE_SOPHOMORE     = 'Sophomore'
+    PLAYER_EXPERIENCE_VETERAN       = 'Veteran'
+    STARTER_BENCH_STARTERS          = 'Starters'
+    STARTER_BENCH_BENCH             = 'Bench'
+    PLAYER_POSITION_FORWARD         = 'F'
+    PLAYER_POSITION_CENTER          = 'C'
+    PLAYER_POSITION_GUARD           = 'G'
+    PLAYER_POSITION_CENTER_FORWARD  = 'C-F'
+    PLAYER_POSITION_FORWARD_CENTER  = 'F-C'
+    PLAYER_POSITION_FORWARD_GUARD   = 'F-G'
+    PLAYER_POSITION_GUARD_FORWARD   = 'G-F'
+    CONF_BOTH                       = 'Both'
   end
 
 end
