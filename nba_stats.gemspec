@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['dan.grzelak@gmail.com']
   spec.summary       = %q{A ruby interface for the stats.nba.com json API.}
   spec.description   = spec.summary
-  spec.homepage      = ''
+  spec.homepage      = 'https://twitter.com/dagrz'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
