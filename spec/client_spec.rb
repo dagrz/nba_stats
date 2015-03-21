@@ -8,7 +8,7 @@ describe 'NbaStats' do
     describe '.get' do
       response = client.get('/')
       it 'should return a response starting with doctype' do
-        expect(response).to start_with '<!doctype html>'
+        expect(response.downcase).to start_with '<!doctype html>'
       end
     end
 

@@ -6,6 +6,7 @@ require 'nba_stats/stats/box_score'
 require 'nba_stats/stats/common_all_players'
 require 'nba_stats/stats/common_player_info'
 require 'nba_stats/stats/player_profile'
+require 'nba_stats/stats/player_dashboard_by_general_splits'
 require 'nba_stats/stats/team_info_common'
 require 'nba_stats/stats/common_team_roster'
 require 'nba_stats/stats/team_game_log'
@@ -39,6 +40,7 @@ module NbaStats
     include NbaStats::CommonAllPlayers
     include NbaStats::CommonPlayerInfo
     include NbaStats::PlayerProfile
+    include NbaStats::PlayerDashboardByGeneralSplits
     include NbaStats::TeamInfoCommon
     include NbaStats::CommonTeamRoster
     include NbaStats::TeamGameLog

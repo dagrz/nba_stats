@@ -9,7 +9,7 @@ module NbaStats
 
       # Array of valid result set names for this resource
       VALID_RESULT_SETS = [
-          :team_years   #:league_id, :team_id, :min_year, :max_year, :abbreviation,
+          :team_years   # :league_id, :team_id, :min_year, :max_year, :abbreviation
       ].freeze
 
       # @return [Array]

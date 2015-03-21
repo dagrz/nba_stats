@@ -60,6 +60,7 @@ module NbaStats
     MEASURE_TYPE_FOUR_FACTORS       = 'Four Factors'
     MEASURE_TYPE_SCORING            = 'Scoring'
     MEASURE_TYPE_OPPONENT           = 'Opponent'
+    MEASURE_TYPE_USAGE              = 'Usage'
     YES                             = 'Y'
     NO                              = 'N'
     GAME_SCOPE_SEASON               = 'Season'
