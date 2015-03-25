@@ -51,6 +51,7 @@ List of available functions:
     player_profile
     player_career_stats
     player_dashboard_by_general_splits
+    player_game_log
     team_info_common
     common_team_roster
     team_game_log

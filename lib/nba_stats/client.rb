@@ -29,6 +29,7 @@ require 'nba_stats/stats/draft_combine_drill_results'
 require 'nba_stats/stats/draft_combine_non_stationary_shooting'
 require 'nba_stats/stats/draft_combine_spot_shooting'
 require 'nba_stats/stats/draft_combine_stats'
+require 'nba_stats/stats/player_game_log'
 require 'nba_stats/errors'
 
 module NbaStats
@@ -63,6 +64,7 @@ module NbaStats
     include NbaStats::DraftCombineNonStationaryShooting
     include NbaStats::DraftCombineSpotShooting
     include NbaStats::DraftCombineStats
+    include NbaStats::PlayerGameLog
 
     # Define the same set of accessors as the Awesome module
     attr_accessor *Configuration::VALID_CONFIG_KEYS
