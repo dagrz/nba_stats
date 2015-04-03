@@ -26,7 +26,7 @@ module NbaStats
     # @param vs_division [String]
     # @param game_segment [String]
     # @param period [Integer]
-    # @param last_n_games [String]
+    # @param last_n_games [Integer]
     # @param game_scope [String]
     # @param player_experience [String]
     # @param player_position [String]

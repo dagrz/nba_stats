@@ -14,7 +14,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="nba_stats (v0.9.1, /Users/doyourwork/Projects/rails/nba_stats) [path][gem]">
+      <library name="nba_stats (v0.9.2, /Users/doyourwork/Projects/rails/nba_stats) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
           <root url="file://$MODULE_DIR$/pkg" />

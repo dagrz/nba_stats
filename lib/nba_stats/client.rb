@@ -30,6 +30,7 @@ require 'nba_stats/stats/draft_combine_non_stationary_shooting'
 require 'nba_stats/stats/draft_combine_spot_shooting'
 require 'nba_stats/stats/draft_combine_stats'
 require 'nba_stats/stats/player_game_log'
+require 'nba_stats/stats/league_dash_team_stats'
 require 'nba_stats/errors'
 
 module NbaStats
@@ -65,6 +66,7 @@ module NbaStats
     include NbaStats::DraftCombineSpotShooting
     include NbaStats::DraftCombineStats
     include NbaStats::PlayerGameLog
+    include NbaStats::LeagueDashTeamStats
 
     # Define the same set of accessors as the Awesome module
     attr_accessor *Configuration::VALID_CONFIG_KEYS
@@ -101,7 +103,8 @@ module NbaStats
     def get(path='/', params={})
       uri = Addressable::URI.new
       uri.query_values = params
-      full_path = "#{path}?#{uri.query}"
+      # Build the path with + instead of %20 because nba.com is flaky
+      full_path = "#{path}?#{uri.query.gsub(/%20/,'+')}"
       request(:get, full_path)
     end
 

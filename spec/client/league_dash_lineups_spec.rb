@@ -6,7 +6,7 @@ describe 'NbaStats' do
     client = NbaStats::Client.new
 
     describe '.league_dash_lineups' do
-      league_dash_lineups = client.league_dash_lineups('2013-14')
+      league_dash_lineups = client.league_dash_lineups('2014-15')
       it 'should return a league_dash_lineups resource' do
         expect(league_dash_lineups).to be_a NbaStats::Resources::LeagueDashLineups
       end
